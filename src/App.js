@@ -1,9 +1,5 @@
 import React from 'react';
 import { RecoilRoot, atom, useRecoilState, useRecoilValue, selector } from 'recoil';
-// import WhoAmI from './WhoAmI'
-// import IAmMe from './IAmMe'
-// import IAmBackwards from './IAmBackwards'
-
 import './App.css';
 
 function App() {
