@@ -1,5 +1,5 @@
 Welcome to a demonstration of global state managament using Recoil.js. 
-![demonstration of global state managament using Recoil.js](./recoil.gif)
+![demonstration of global state managament using Recoil.js](src/recoil.gif)
 
 To see it in action:
 - clone the repository
