@@ -5,10 +5,11 @@ import './App.css';
 function App() {
   return (
     <RecoilRoot>
-      <WhoAmI />
+      <div className="panels">
       <IAmMe />
-      <br />
+      <WhoAmI />
       <IAmBackwards />
+      </div>
     </RecoilRoot>
   );
 }
@@ -26,19 +27,22 @@ function WhoAmI() {
     setText(event.target.value);
   };
 
-  return(
-    <div>
+  return (
+    <div className="panel">
       Who Am I????
       <br />
       <input type="text" value={text} onChange={onChange} />
-    
+      <br/>
+      <br />
+
+      {text}
     </div>
   );
 }
 
 const displayMe = selector({
   key: 'displayMe',
-  get: ({get}) => {
+  get: ({ get }) => {
     const me = get(textState)
     return me.toUpperCase()
   }
@@ -52,19 +56,31 @@ const backwardMe = selector({
   }
 })
 
-function IAmMe(){
+function IAmMe() {
   const me = useRecoilValue(displayMe)
-  return(
-    <>
-    {me}
-    </>
+  return (
+    <div className="panel">
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+
+      {me}
+    </div>
   )
 }
-function IAmBackwards(){
+function IAmBackwards() {
   const me = useRecoilValue(backwardMe)
-  return(
-    <>
-    {me}
-    </>
+  return (
+    <div className="panel">
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+
+      {me}
+    </div>
   );
 }
